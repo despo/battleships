@@ -1,4 +1,4 @@
-require_relative 'moves'
+require_relative 'myboard'
 require_relative 'ships'
 
 class BattleshipWarrior
