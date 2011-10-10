@@ -13,6 +13,7 @@ module Board
       80, 82, 84, 86, 88,
       91, 93, 95, 97, 99
     ]
+    @remaining_moves = 100.times.map { |x| x } - @available_moves
   end
 
   def last_move_was_a type
@@ -54,6 +55,7 @@ module Board
   end
 
   def random_move
+    @available_moves = @remaining_moves if @available_moves.empty?
     @available_moves.sample.divmod 10
   end
 
